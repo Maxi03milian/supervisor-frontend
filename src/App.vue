@@ -24,7 +24,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
+
 }
 
 nav {
@@ -41,8 +42,22 @@ nav a.router-link-exact-active {
 }
 
 .app-background{
-    background: linear-gradient(to bottom, #193864 0%, #060850 100%);
+    background: linear-gradient(-45deg, #193864,#060850,#193864,#060850 );
     min-height: 100vh;
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 

@@ -1,10 +1,22 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="app">
+    <router-view/>
+  </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  components: {
+  },
+  setup() {
+    document.getElementsByTagName('html')[0].classList.add('app-background')
+    console.log(document.getElementsByTagName('html')[0])
+    return {
+    }
+  }
+}
+</script>
 
 <style>
 #app {
@@ -27,4 +39,11 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+.app-background{
+    background: linear-gradient(to bottom, #193864 0%, #060850 100%);
+    min-height: 100vh;
+}
+
+
 </style>

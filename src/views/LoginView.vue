@@ -13,10 +13,15 @@
         color="#ffffff"
         outlined
       ></v-text-field>
-      <v-text-field label="Password" color="#ffffff" outlined></v-text-field>
+      <v-text-field
+        @focus="focusInputs"
+        @blur="unfocusInputs"
+        label="Password"
+        color="#ffffff"
+        outlined
+      ></v-text-field>
       <v-btn class="form-button" elevation="10" color="#193864" block rounded
-        >Log in</v-btn
-      >
+        >Log in</v-btn>
     </div>
   </div>
 </template>
@@ -41,7 +46,7 @@ export default {
       focusInputs,
       unfocusInputs,
       title,
-      form
+      form,
     };
   },
 };
@@ -75,7 +80,7 @@ export default {
   transition: all 0.25s ease;
 }
 
-.form-move{
+.form-move {
   transform: translateY(-80%);
   transition: all 0.25s ease;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="login-title" ref="title">
-      <h1>Supervisor</h1>
+      <h1>SUPERVISOR</h1>
       <p>Bringing out the best <br />of your work</p>
     </div>
     <div class="login-form" ref="form">

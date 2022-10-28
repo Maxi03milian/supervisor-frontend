@@ -21,7 +21,16 @@
         outlined
       ></v-text-field>
       <v-btn class="form-button" elevation="10" color="#193864" block rounded
-        >Log in</v-btn>
+        >Log in</v-btn
+      >
+      <br />
+      <hr />
+      <div class="form-register">
+        <p class="register-text">Don't have an account?</p>
+        <v-btn class="form-button" elevation="10" color="#193864" block rounded
+          >Register</v-btn
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -56,13 +65,16 @@ export default {
 .login {
   text-align: left;
   padding: 10% 5%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .login-title {
   font-size: 1.5rem;
   transition: all 0.25s ease;
 }
 .login-form {
-  margin-top: 2rem;
   transition: all 0.25s ease;
 }
 
@@ -81,7 +93,15 @@ export default {
 }
 
 .form-move {
-  transform: translateY(-80%);
+  transform: translateY(-100%);
   transition: all 0.25s ease;
+}
+
+.form-register {
+  margin-top: 2rem;
+}
+
+.register-text {
+  margin-bottom: 1rem;
 }
 </style>

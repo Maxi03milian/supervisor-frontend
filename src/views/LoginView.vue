@@ -93,7 +93,7 @@ export default {
 }
 
 .form-move {
-  transform: translateY(-100%);
+  transform: translateY(-120%);
   transition: all 0.25s ease;
 }
 

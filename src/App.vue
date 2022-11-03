@@ -1,13 +1,16 @@
 <template>
   <div class="app">
+    <Navbar />
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue";
 export default {
   name: 'App',
   components: {
+    Navbar
   },
   setup() {
     document.getElementsByTagName('html')[0].classList.add('app-background')

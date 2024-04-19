@@ -6,9 +6,6 @@ module.exports = defineConfig({
 		}
   },
   devServer: {
-    allowedHosts: [
-      'localhost',
-      '128.140.84.10',
-    ],
+    disableHostCheck: true
   },
 })

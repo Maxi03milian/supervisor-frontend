@@ -6,6 +6,10 @@ module.exports = defineConfig({
 		}
   },
   devServer: {
-    disableHostCheck: true
+    allowedHosts: [
+      'localhost',
+      'http://m8cckcs.128.140.84.10.sslip.io',
+    ],
   },
+
 })

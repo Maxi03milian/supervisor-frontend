@@ -1,13 +1,16 @@
 <template>
   <div class="app">
+    <Navbar />
     <router-view/>
   </div>
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue";
 export default {
   name: 'App',
   components: {
+    Navbar
   },
   setup() {
     document.getElementsByTagName('html')[0].classList.add('app-background')
@@ -42,7 +45,7 @@ nav a.router-link-exact-active {
 }
 
 .app-background{
-    background: linear-gradient(-45deg, #193864,#060850,#193864,#060850 );
+    background: linear-gradient(-45deg, #132b4c,#060850,#132b4c,#060850);
     min-height: 100vh;
     animation: gradient 15s ease infinite;
     background-size: 400% 400%;

@@ -1,7 +1,7 @@
 <template>
   <div class="login">
     <div class="login-title" ref="title">
-      <h1>Supervisor</h1>
+      <h1>SUPERVISOR</h1>
       <p>Bringing out the best <br />of your work</p>
     </div>
     <div class="login-form" ref="form">
@@ -13,10 +13,24 @@
         color="#ffffff"
         outlined
       ></v-text-field>
-      <v-text-field label="Password" color="#ffffff" outlined></v-text-field>
+      <v-text-field
+        @focus="focusInputs"
+        @blur="unfocusInputs"
+        label="Password"
+        color="#ffffff"
+        outlined
+      ></v-text-field>
       <v-btn class="form-button" elevation="10" color="#193864" block rounded
         >Log in</v-btn
       >
+      <br />
+      <hr />
+      <div class="form-register">
+        <p class="register-text">Don't have an account?</p>
+        <v-btn class="form-button" elevation="10" color="#193864" block rounded
+          >Register</v-btn
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -41,7 +55,7 @@ export default {
       focusInputs,
       unfocusInputs,
       title,
-      form
+      form,
     };
   },
 };
@@ -51,13 +65,16 @@ export default {
 .login {
   text-align: left;
   padding: 10% 5%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .login-title {
   font-size: 1.5rem;
   transition: all 0.25s ease;
 }
 .login-form {
-  margin-top: 2rem;
   transition: all 0.25s ease;
 }
 
@@ -75,8 +92,16 @@ export default {
   transition: all 0.25s ease;
 }
 
-.form-move{
-  transform: translateY(-80%);
+.form-move {
+  transform: translateY(-120%);
   transition: all 0.25s ease;
+}
+
+.form-register {
+  margin-top: 2rem;
+}
+
+.register-text {
+  margin-bottom: 1rem;
 }
 </style>
